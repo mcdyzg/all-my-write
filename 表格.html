@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>商品管理</title>
+
+    <!-- Bootstrap -->
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <style type="text/css">
+
+  h3{
+    font-family: '微软雅黑';
+  }
+  .thead{
+    background-color: #FF8000;
+  }
+  tbody>tr:nth-child(even){
+    background-color: #FFF8D7;
+  }
+  tbody>tr:hover{
+    background-color: #FFF0AC;
+  }
+  tbody>tr td{
+    font-size: 16px;
+    font-family: '微软雅黑';
+  }
+  .add{
+    margin-bottom: 10px;
+  }
+  </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <h3 class="text-center text-info">
+        商品管理系统
+  </h3>
+  <div class="container">
+    <div class="row">
+      <div class="add"><button class="btn btn-warning" type="button">新增商品</button></div>
+      <table class="table">
+        <thead class="thead">
+          <tr>
+            <th>
+              编码 
+            </th>
+            <th>
+              名称
+            </th>
+            <th>
+              规格
+            </th>
+            <th>
+              计量单位
+            </th>
+            <th>
+              
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              芳
+            </td>
+            <td>
+              20g
+            </td>
+            <td>
+              克（g）
+            </td>
+            <td>
+              <button class="btn btn-warning btn-sm" type="button">删除</button>
+              <button class="btn btn-warning btn-sm" type="button">编辑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              CLI
+            </td>
+            <td>
+              15ml
+            </td>
+            <td>
+              毫升（ml）aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </td>
+            <td>
+              <button class="btn btn-warning btn-sm" type="button">删除</button>
+              <button class="btn btn-warning btn-sm" type="button">编辑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3
+            </td>
+            <td>
+              Borgh
+            </td>
+            <td>
+              212g
+            </td>
+            <td>
+              克（g）
+            </td>
+            <td>
+              <button class="btn btn-warning btn-sm" type="button">删除</button>
+              <button class="btn btn-warning btn-sm" type="button">编辑</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+      
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!--     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+ -->    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>

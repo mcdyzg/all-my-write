@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表单</title>
+
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<style type="text/css">
+  body{
+    margin: 0;
+  }
+  .a{
+    background-color: black;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.7s;
+    position: absolute;
+    text-indent: -120%;
+    opacity: 0;
+    /*效果一*/
+    /*width: 0;
+    height: 0;*/
+    
+
+    z-index: 3;
+  }
+  .a:focus{
+    opacity: 0.8;
+    text-indent: 0;
+    /*效果二*/
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;  
+
+
+
+
+    /*效果一*/
+    /*width: 100%;
+    height: 100%;*/
+    z-index: 1
+  }
+  .a:after{
+    border-style: solid;
+    border-width: 15px 0;
+    border-color: orange;
+    width: 45px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    content: "";
+    opacity: 1;
+    /*box-shadow: -5px -5px 5px #888888;*/
+  }
+  div.b{
+    z-index: 2;
+    border-style: solid;
+    border-width: 15px 0;
+    border-color: black;
+    width: 45px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    content: "";
+    opacity: 1;
+  }
+/*  div.b:after{
+    content: "";
+    position: absolute;
+    height: 45px;
+    width: 2px;
+    left: 21px;
+    background-color: black;
+    transform:rotate(45deg);
+  }
+  div.b:before{
+    content: "";
+    position: absolute;
+    height: 45px;
+    width: 2px;
+    background-color: black;
+    transform: rotate(-45deg);
+    left: 21px;
+  }*/
+	</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="b"></div>
+
+  <a class="a" href="javsscript:void(0)">
+    点击我
+  </a>
+
+  <script type="text/javascript">
+
+    window.onload=function(){
+
+    }
+  </script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

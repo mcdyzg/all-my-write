@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#login{
+		width: 300px;
+		height: 200px;
+		display: none;
+		position: absolute;
+		background-color: red;
+
+	}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			
+			document.getElementById('a').addEventListener('click',function(){
+				document.getElementById('login').style.display='block';
+				var sheight=document.documentElement.clientHeight;
+				var swidth=document.documentElement.clientWidth;
+				var height=document.getElementById('login').offsetHeight;
+				var width=document.getElementById('login').offsetWidth;
+				var top=(sheight-height)/2;
+				var left=(swidth-width)/2;
+				document.getElementById('login').style.top=top+'px';
+				document.getElementById('login').style.left=left+'px';
+			});
+		}
+	</script>
+</head>
+<body>
+	<div id="a">
+		haha
+	</div>
+	<div id="login">
+		登录框
+	</div>
+</body>
+</html>

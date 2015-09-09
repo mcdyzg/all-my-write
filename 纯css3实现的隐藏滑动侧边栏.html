@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表单</title>
+
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<style type="text/css">
+  body{
+    margin: 0;
+  }
+  .a{
+    width: 0;
+    height: 100%;
+    background-color: #14B9FF;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.7s;
+    float: left;
+    position: absolute;
+    text-indent: -600px;
+
+  }
+  .a:focus{
+    width: 300px;
+    text-indent: 0;
+  }
+  .a:after{
+    border-style: solid;
+    border-width: 15px 0;
+    border-color: #14B9FF;
+    width: 45px;
+    height: 15px;
+    background-color: #FFECF5;
+    position: absolute;
+    right: -60px;
+    top: 20px;
+    content: "";
+    /*box-shadow: -5px -5px 5px #888888;*/
+  }
+
+	</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <a class="a" href="javsscript:void(0)">
+    点击我
+  </a>
+
+  <script type="text/javascript">
+
+    window.onload=function(){
+
+    }
+  </script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

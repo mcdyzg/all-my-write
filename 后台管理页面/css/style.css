@@ -1,0 +1,242 @@
+  * {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    *:before,
+    *:after {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+  .clearfix:before,
+  .clearfix:after{
+          content: "";
+          display: table;
+          clear: both;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: '微软雅黑';
+  }
+  html{
+    height: 100%;
+  }
+  body{
+    height: 100%;
+  }
+  .wrap{
+    background-color: #086ed5;
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+
+
+
+
+
+  .title{
+    height: 25px;
+    background-color: #878787;
+    border-bottom: 1px solid #6A6A6A;
+  }
+  .title>img{
+    float: right;
+    display: block;
+    padding-top: 4px;
+    padding-left: 4px;
+    width: 18px;
+    height: 18px;
+/*    vertical-align: middle;*/
+  }
+  .header{
+    height: 40px;
+    background-image: -webkit-linear-gradient(top,#086ed5,#055db5);
+    line-height: 40px;
+  }
+  .header .tip{
+    height: 35px;
+    line-height: 35px;
+    padding-left: 12px;
+    width: 100px;
+    background-color: #E98F18;
+    position: relative;
+    top:10px;
+    left: 75px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .header .search{
+    padding-top: 9px;
+    padding-right: 15px;
+  }
+
+  .header .search input{
+    background-color: #46A3FF;
+    float: right;
+    height: 25px;
+    border-radius: 8px;
+    border-color:transparent;
+    box-shadow: 0 0 4px #3AF;
+    text-indent: 20px;
+    /*color: #ACD6FF;*/
+    color:white;
+  }
+  .header .search button{
+    float: right;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border:0;
+    color:white;
+    position: relative;
+    right: -25px;
+  }
+
+  
+
+
+
+
+
+
+
+  .main{
+    position: absolute;
+    /*height: 100%;*/
+    left: 0;
+    top:65px;
+    right: 0;
+    bottom:0;
+  }
+  .main>.tab{
+    width: 75px;
+    min-height: 560px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+  }
+  .main>.tab>ul{
+    list-style: none;
+    width:75px;
+
+  }
+  .main>.tab>.page{
+    width: 300px;
+    height: 560px;
+    position: absolute;
+    left:75px;
+    top:0;
+    background-color: #ECF5FF;
+    z-index: 1;
+    display: none;
+    border-right: 1px solid grey;
+  }
+  .tab>.page>.top{
+    font-size: 16px;
+    color: #005AB5;
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #AEB2BF;
+    padding-left: 15px;
+  }
+  .tab>.page>.top>span{
+    float: right;
+    height: 25px;
+    width: 25px;
+    color: black;
+  }
+  .tab>.page>.top>form>input{
+    background-color: white;
+    width: 254px;
+    height: 25px;
+    border-radius: 15px;
+    border:1px solid grey;
+    /*box-shadow: 0 0 4px #3AF;*/
+    text-indent: 20px;
+    color: #ACD6FF;
+  }
+  .tab>.page>.top>form>button{
+    /*float: right;*/
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border:0;
+    color:#005AB5;
+    position: relative;
+    right:259px;
+  }
+  .tab>.page>.tree-list{
+    height: 370px;
+    overflow: auto;
+    padding-left: 10px;
+  }
+  .tab>.page>.tree-list ul{
+    padding-left: 15px;
+    display: none;
+  }
+  .tab>.page>.tree-list li{
+    /*list-style-position: inside;*/
+    list-style-image: url('../img/right.png');
+  }
+  .tab>.page>.bottom{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #005AB5;
+    cursor:pointer;
+    text-align: center;
+    /*border-bottom: 1px solid grey;*/
+  }
+  .tab>.page>.bottom>img{
+    height: 16px;
+    width: 16px;
+  }
+  .tab>.page>.bottom:hover{
+    border-top: 1px solid #EBC895;
+    border-bottom: 2px solid #E9B260;
+    background-color: #FFECAE;
+  }
+  .main>.tab>ul>li{
+    height: 75px;
+    margin:5px;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 8px;
+  }
+  .main>.tab>ul>li>img{
+    margin: 0 auto;
+    display: block;
+  }
+  .main>.tab>ul>li>a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+
+  }
+  .main>.tab>ul>li:hover{
+    box-shadow: 0px -2px 9px 1px #666;
+    background-color: #AECEED;
+  }
+  .main>.tab>.login{
+    color: white;
+    font-size: 14px;
+    text-indent: 9px;
+    height: 25px;
+  }
+  .main>.tab>.login>img{
+    vertical-align: middle;
+  }
+  .main>.content{
+    background-color: #D2E9FF;
+    position: absolute;
+    left:75px;
+    right: 0;
+    top:0;
+    bottom: 0;
+  }

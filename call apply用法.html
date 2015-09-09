@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function add(a,b){
+			alert(a+b);
+		}
+		function sub(a,b){
+			alert(a-b);
+		}
+		add.call(sub,3,1);
+		// 没有用，因为add虽然在sub环境中执行，相当于		
+		//  function sub(a,b){
+		// 	add(3,1);
+		// 	alert(a-b);
+		// }
+		// sub();
+		// 但是add并没有用到sub对象的一些值
+
+
+		// function Animal(){
+		// 	this.na='animal';
+		// 	this.showna=function(){
+		// 		alert(this.na);
+		// 	}
+		// }
+		// function Cat(){
+		// 	this.na='cat';
+		// }
+		// Cat.na='haha';
+		// var animal=new Animal();
+		// var cat=new Cat();
+		// animal.showna.call(cat);
+		// animal.showna.call(Cat);
+		// 此处就有用了，因为animal实例在cat实例下执行的，而cat实例也有na属性，所以cat的na把animal的na属性给覆盖了，输出cat的na属性，如果animal实例是在Cat函数对象下执行，那么输出的就是Cat的na属性。还有一点是直接alert(Cat.name)会输出Cat，即函数名；
+
+
+
+
+		function Ani(me){      
+		    this.haha = me;      
+		    this.showName = function(){      
+		        alert(this.haha);      
+		    }      
+		}      
+		  
+		function Dog(hehe){    
+		    Ani.call(this, hehe);    
+		}      
+		    
+		var dog = new Dog("Black Cat"); 
+		alert(dog.haha); 
+		alert(Dog.haha);   
+		dog.showName();  
+		// 另一用法，用于继承，因为下文实例了一个Dog对象，所以this指向的是Dog对象实例，相当于拿Ani函数对象中的构造语句实例化Dog对象dog，new Dog时传入了blackCat，这个值给了hehe然后又传给了me，如果把this.haha赋值成字符串，则dog.showName显示那个字符串，因为dog.haha初始化是就是赋的那个值、
+		另一个实例：
+		function fun1() {
+            this.add = function () { return this.a }
+        }
+        function fun2() {
+            this.sub = function () { return this.a-this.b }
+        }
+        function fun3() {
+            this.a = 10;
+            this.b = 2;
+             fun1.call(this);
+            fun2.call(this);
+        }
+        var f3 = new fun3()
+        alert(f3.add());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

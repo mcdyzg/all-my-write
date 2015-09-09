@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>表单</title>
+
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<style type="text/css">
+  body{
+    margin: 0;
+  }
+  .a{
+    width: 0;
+    height: 100px;
+    background-color: pink;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.7s;
+    /*float: left;*/
+    position: absolute;
+  }
+  .a:focus{
+    width: 500px;
+    height: 500px;
+  }
+  .a:after{
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    position: absolute;
+    right: -12px;
+    top: 12px;
+    content: "x";
+  }
+  .b{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    float: left;
+    transition: all 0.7s;
+  }
+  .clicked{
+    width: 500px;
+    height: 500px;
+  }
+	</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <a class="a" href="javsscript:void(0)">
+    点击我
+  </a>
+  <div class="b">
+    点击我
+  </div>
+
+  <script type="text/javascript">
+
+    window.onload=function(){
+    //方法一：
+    //   var b=document.getElementsByTagName('div')[0];
+    //   b.onclick=function(){
+    //     b.setAttribute('class','b clicked');
+    //   }
+    //方法二：
+      // document.getElementsByTagName('div')[0].style.width='500px';
+      // document.getElementsByTagName('div')[0].style.height='500px';
+      //方法三：
+        $(".b").click(function(){
+          $(".b").toggleClass("clicked");
+        });
+    }
+  </script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
+  </body>
+</html>

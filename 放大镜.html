@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#demo{
+		position: absolute;
+		left: 50px;
+		top:60px;
+		width: 400px;
+		height: 255px;
+		border:1px solid #ccc;
+	}
+	#demo>img{
+		width: 400px;
+		height: 255px;
+	}
+	#float-box{
+		width: 160px;
+		height: 120px;
+		position: absolute;
+		cursor:move;
+		border:1px solid #ccc;
+		background-color: #ffffcc;
+		opacity:0.5;
+		filter:alpha(opacity=50);
+		display: none;
+	}
+	#big-box{
+		width: 400px;
+		height: 300px;
+		position: absolute;
+		top:0;
+		left:500px;
+		border: 1px solid #ccc;
+		overflow: hidden;
+		display: none;
+	}
+	#big-box img{
+		position: absolute;
+	}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var demo=document.getElementById('demo');
+			var floatbox=document.getElementById('float-box')
+			var bigbox=document.getElementById('big-box')
+			var bigboximg=bigbox.getElementsByTagName('img')[0];
+			demo.onmouseover=function(){
+				floatbox.style.display='block';
+				bigbox.style.display='block';
+			}
+			demo.onmouseout=function(){
+				floatbox.style.display='none';
+				bigbox.style.display='none';
+			}
+			demo.onmousemove=function(e){
+				var event=e||window.e;
+				var left=event.clientX-demo.offsetLeft-floatbox.offsetWidth/2;
+				var top=event.clientY-demo.offsetTop-floatbox.offsetHeight/2;
+				if (left<0) {
+					left=0;
+				}else if(left>(demo.offsetWidth-floatbox.offsetWidth)){
+					left=demo.offsetWidth-floatbox.offsetWidth;
+				}
+				if (top<0) {
+					top=0;
+				}else if(top>(demo.offsetHeight-floatbox.offsetHeight)){
+					top=demo.offsetHeight-floatbox.offsetHeight;
+				}
+				floatbox.style.left=left+'px';
+				floatbox.style.top=top+'px';
+				var pencentleft=left/(demo.offsetWidth-floatbox.offsetWidth);
+				var pencenttop=top/(demo.offsetHeight-floatbox.offsetHeight);
+				bigboximg.style.left=-pencentleft*(bigboximg.offsetWidth-bigbox.offsetWidth)+'px';
+				bigboximg.style.top=-pencenttop*(bigboximg.offsetHeight-bigbox.offsetHeight)+'px';
+				document.getElementById('a').innerHTML=pencentleft+'<br>'+pencenttop;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="demo">
+		<!-- <div id="small-box"> -->
+			<!-- <div id="mark"></div> -->
+			<div id="float-box"></div>
+			<img src="http://img.mukewang.com/537d77fb0001559d04000255.jpg"/>
+		<!-- </div> -->
+		<div id="big-box">
+			<img src="http://img.mukewang.com/537d781b0001c04210240654.jpg"/>
+		</div>
+		<div id="a">
+			
+		</div>
+	</div>
+</body>
+</html>
